@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Liquid Helium</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:first-child { margin-top: -20px; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: normal; src: local("Open Sans Regular"), url("./github/400.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: normal; src: local("Open Sans Italic"), url("./github/400i.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: bold; src: local("Open Sans Bold"), url("./github/700.woff") format("woff"); }
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: bold; src: local("Open Sans Bold Italic"), url("./github/700i.woff") format("woff"); }
+html { font-size: 16px; }
+body { font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); line-height: 1.6; }
+#write { max-width: 860px; margin: 0px auto; padding: 30px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+a { color: rgb(65, 131, 196); }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, blockquote, ul, ol, dl, table { margin: 0.8em 0px; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 2px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; overflow: hidden; box-sizing: content-box; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(223, 226, 229); padding: 0px 15px; color: rgb(119, 119, 119); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(223, 226, 229); margin: 0px; padding: 0px; }
+table tr:nth-child(2n), thead { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(223, 226, 229); border-right-color: rgb(223, 226, 229); border-left-color: rgb(223, 226, 229); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(223, 226, 229); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-lines { padding-left: 4px; }
+.code-tooltip { box-shadow: rgba(0, 28, 36, 0.3) 0px 1px 1px 0px; border-top: 1px solid rgb(238, 242, 242); }
+.md-fences, code, tt { border: 1px solid rgb(231, 234, 237); background-color: rgb(248, 248, 248); border-radius: 3px; padding: 2px 4px 0px; font-size: 0.9em; }
+code { background-color: rgb(243, 244, 244); padding: 0px 4px 2px; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+.md-task-list-item > input { margin-left: -1.3em; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { word-wrap: break-word; }
+}
+.md-fences { background-color: rgb(248, 248, 248); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+.md-mathjax-midline { background: rgb(250, 250, 250); }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
+.md-tag { color: rgb(167, 167, 167); opacity: 1; }
+.md-toc { margin-top: 20px; padding-bottom: 20px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Arial, sans-serif; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+.md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+#md-notification .btn { border: 0px; }
+.dropdown-menu .divider { border-color: rgb(229, 229, 229); }
+
+
+
+
+
+ .typora-export p, .typora-export .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-node'><h2><a name='header-n0' class='md-header-anchor '></a>Superfluidity</h2><ul><li><p><code>P13</code> <strong>朗道二流体模型</strong></p><ol start='' ><li><p>左图是液氦中（声振动）准粒子的色散关系，尤其要注意的是它在零动量处斜率不为零，而是有限值u，可以看作是声波波速，u≈240m/s. </p></li><li><p>色散关系有个极小值，在这附近，色散关系可以展成二次型。这个二次的色散关系对应一种准粒子，朗道称之为“旋子”（rotons）。注意旋子本质还是声子，但是与零点附近的声子转化较为困难。旋子的有效质量m*≈0.14氦原子质量。</p></li><li><p>由于旋子能量有一个很高的bias，可以应用Boltzmann统计，发现旋子对热力学量的贡献关于温度是指数的exp(-Δ/T)。因此在足够低的温度下（大约低于0.8K），旋子的部分小于声子的部分；而在较高的温度下，旋子的贡献超过声子的贡献。</p></li><li><p>我们先考察零温的情况。</p><ol start='' ><li>假设初始液氦以速度v在毛细管中稳定流动。</li><li>换到液氦静止的参考系，毛细管以速度-v匀速运动。假如有黏性，毛细管壁要带动液氦流动，必然从激发一个准粒子开始。</li><li>假如出现了一个准粒子，能量ε，动量p。对于声激发来说，这就是液体在这个参考系中的能量和动量。换回原来的参考系。</li><li>按照经典力学的变换，在原来的参考系中能量附加一项ε+p·v，粘滞力必然是耗散的，这要求这附加的能量小于零。</li><li>至少应该满足ε-pv&lt;0，或v&gt;ε/p，或者至少是v&gt;min(ε/p)。</li><li>对于低于这个限度的流速，元激发不可能产生，因此粘滞性为零。</li><li>实际上由于有其他类型的激发（如量子涡旋），超流流速上限比这个低很多（20m/s左右）。</li></ol></li><li><p>对于非零温的情况，情况是类似的。在较低的温度下，液氦中原本就有元激发。但我们看见，上边的讨论并没用用到原本没有元激发这一条件，因此上述论证依然适用。</p></li></ol></li><li><p><code>P14</code> <strong>朗道二流体模型</strong></p><ol start='' ><li>在有限温度的低温下，液氦中存在着元激发气体。假设其整体以速度v运动，准粒子的能量是ε，动量是p。</li><li>我们应当在元激发气体整体静止的参照系中应用平衡态统计分布。因此在原参考系中，气体单位体积的总动量是如上述公式，其中f(ε-p·v)是在气体静止参考系中的平衡态分布（注意声子是无质量粒子）。</li><li>假设运动速度不大，我们可以展开f(ε-p·v)，只保留领头阶。</li><li>对于给定的v方向，p的积分可以先在全空间按照方向平均。这样可以把v提到外面来。我们发现这个动量密度可以写成某个系数乘上运动速度的形式。</li><li>定义这个系数是正常流体的有效质量，因这元激发气体可以与器壁碰撞，交换能量动量，并不具有超流性。</li><li>注意元激发气体在液氦中流动，并不和超流体交换能量动量（前一页的论证，不能激发新的准粒子），因此正常流体和超流体之间也没有摩擦。</li><li>注意这并不是说λ点以下的液氦就是分成两种流体，这只是一种等效的描述，两种不同性质的部分各自以各自的等效质量运动，仿佛是两种流体。</li></ol><p>左图所示是二流体模型中两种组分密度随温度变化的曲线，临界指数β≈0.67. 实验测得的结果与三维XY模型符合得很好。我们可以唯像地定义序参量Δ=n_s/(n_s+n_n ).</p></li><li><p><code>P15</code> <strong>喷泉</strong></p><ol start='' ><li>基于二流体模型，我们可以将液氦II的流密度分为两部分，一部分是超流，一部分是正常流。</li><li>由于超流基本上是一个多体量子态，因此不携带熵；只有正常流体携带熵。因此热流密度只是与v_n有关。</li><li>考虑用一个超密多孔塞连接的两部分液氦II，只允许超流液氦流过，这样不会有热流流动，因此两边温度不会达到相等。可以保持一个温度差。</li><li>此外，由于超流液氦的流动，两边的化学势最终要相等。Gibbs-Duhem关系给出，dμ=0时，两边的压强差正比于温度差，比例系数是单位体积的熵，也就是正常流体的熵密度。</li><li>如果在图中毛细管中加热，形成一个温度差，就可以造出一个压强差，将毛细管中液氦压出，形成小喷泉。</li></ol></li><li><p><code>P16</code> <strong>喷泉</strong></p><p>我们再看一遍喷泉的视频。</p></li><li><p><code>P17</code> <strong>凝聚体波函数</strong></p><p>现在我们换一种观点，引入凝聚体整体波函数。</p><ol start='' ><li>我们知道，氦4的超流相变实际上与形成了类似BEC的凝聚体（氦4原子核是玻色子，可以看作强相互作用的玻色凝聚体）直接相关。凝聚体的密度可以作为序参量。</li><li>为了描述凝聚体的状态，定义整体波函数ψ<em>0 (r)，使得n_0 (r)=|ψ</em>0 (r)|^2是此处local的凝聚体中粒子数密度。于是ψ_0 (r)=√(n_0 (r)) e^(iθ(r)). 注意有一个相位，对应于XY模型中一个方位角，在无序态θ是随机的，相变后，θ是有序的。注意，我们用下标0表示凝聚体，且尤其应注意，并没有理由认为n_0=n_s，事实上，凝聚体流动对超流的贡献只有一小部分。</li><li>我们计算ψ_0 (r)的流密度，得到凝聚体的速度表达式，并且可见这个速度是有势的。由于这个速度只是直接相关于一个量子态的参数，当凝聚体处于这个量子态的时候，这个运动就是没有耗散的。</li><li>再次强调，凝聚体与超流现象同时出现，都在零温时最显著，且机械运动速度都是超流速度，但凝聚体只贡献了超流体的一小部分（零温下约10%）。</li><li>因这速度是有势的，它是无旋的场。</li></ol></li><li><p><code>P18</code> <strong>量子涡旋</strong></p><ol start='' ><li>考虑如图所示的一套同轴圆筒，内筒和外筒之间填充了超流液氦。初始内筒和液氦都是静止的，外筒旋转。</li><li>外筒带动超流部分的液氦转动。计算超流液氦的环量κ.</li><li>由于凝聚体的波函数应该是单值的，我们得出环量的量子化条件。</li><li>我们发现，在非单连通区域内，超流液氦的环流是量子化的，称为量子涡旋。</li></ol></li><li><p><code>P19</code> <strong>量子涡旋</strong></p><p>量子涡旋可以看作是超流体中的缺陷，涡旋的半径约为1Å。</p><ol start='' ><li>现在考虑没有内筒的情况。超流液氦初始处于静止，外筒旋转。</li><li>按照超流速度场是无旋的这一条件，本应该导出：液氦不会被外筒带动旋转。但是实验观测到，液氦确实有一个整体的旋转。</li><li>这也就是说明，这个超流流速场存在的区域不再是单连通的。其中存在很多小涡旋，每个小涡旋的环量都是如前所述量子化的。</li><li>在小涡旋的中心，液氦不是超流相的。</li><li>在通常的实验条件下，这些小涡旋基本上每个环量都是一个激发，也就是总的激发数目约为涡旋数目。</li><li>在空间排布上，一个能量较低的排布是如图所示的三角形格子。相互隔开的原因可能是小涡旋碰撞形成大涡旋的能量比单独小涡旋的能量要高。</li></ol></li><li><p><code>P20</code> <strong>热传导，第二声</strong></p><ol start='' ><li>我们再回过头来看喷泉效应，我们前面从熵的角度来解释了，现在我们作一个更直观的解释。</li><li>考虑如图所示的U型管，中间填充致密多孔材料（如金刚砂），浸没在超流相液氦中，初始两端液面高度平齐。我们通过某种方式使得两端出现温度差ΔT。</li><li>温度较高的一边液氦的ρ_s/ρ要下降，相当于超流部分的浓度下降了，这样为了补偿这个浓度差，低温端中超流部分的液氦就通过多孔塞冲进高温端，而另一方面正常部分的流动被多孔塞阻滞，因此净效果就是高温区液面上升而低温区液面下降，从而形成了压强差。目前看来，没有机制使得这一过程达到平衡，也就是会形成喷泉。</li><li>如果我们撤去多孔塞，使用一个连通的U型管。这时两端的压强差使得正常部分的流体开始流动（Poiseuille公式），从而补偿超流部分的流动，从而使得这个过程达到一个动态平衡。正常流体的流动将热量带到冷端。</li><li>这是一个超流和正常流的对流过程，超流液氦以这种方式导热，但是实际上超流部分和正常流体部分是不可分的，因此这与普通的对流导热有着本质的不同。</li><li>如果使得热端的温度周期性变化，这“对流”流密度也会周期性响应，实际的效果是ρ<em>s/ρ</em>n 这个量从热端到冷端周期性变化，类似声波（疏密波），我们称这种波动为第二声。声波可以类比于晶格振动的声分支（比如所有的原子朝一个方向运动）；而第二声类比于晶格振动的光分支（比如原子相向振动），因为正常部分和超流部分相向运动。但我们说晶格振动具有一个ω∼k^2的色散关系，但是第二声具有一个线性的色散关系（在给定温度下）（不作说明）。</li><li>由于ρ_n具有熵，这种波又是一种熵波，也是一种温度波。不同于声波，声波虽然也是温度波（绝热近似下压强变化带来温度变化），但是本质上很不一样。这就是超流液氦的导热机制。</li><li>对于氦4，在1~2K区间内，第二声波速约20m/s，虽然比声速低一个量级，但是对于热传导来说，这足以使得超流液氦的热导率在众多材料中脱颖而出。</li></ol></li><li><p><code>P21</code> <strong>热传导，第二声</strong></p><ol start='' ><li>由于ρ_n具有熵，这种波又是一种熵波，也是一种温度波。不同于声波，声波虽然也是温度波（绝热近似下压强变化带来温度变化），但是本质上很不一样。这就是超流液氦的导热机制。</li><li>对于氦4，在1~2K区间内，第二声波速约20m/s，虽然比声速低一个量级，但是对于热传导来说，这足以使得超流液氦的热导率在众多材料中脱颖而出。</li><li>我们来介绍一下一个比较老的实验方案，用来测量第二声的波速。</li><li>我们可以用如图所示的装置，底部的加热器电流频率是f_0，因而加热的频率是2f_0. 温度的波动沿着液柱向上传播，遇到自由液面反射回来，形成驻波。自由表面是波腹，因而温度变化幅度最大，引起液面上方蒸汽的温度周期变化，考虑绝热近似，这会导致压强周期变化，从而产生声波。高灵敏麦克风收集声波。随着液氦的汽化，液面逐渐降低，因此可以连续测到各个极强的位置。类似测定空气中声速的方法，我们就可以导出第二声的波速。</li><li>我们也可以用灵敏温度计，浸没在液体中，因而液柱长度固定。在不同频率下做实验，同样可以测出来。</li><li>我们还可以用脉冲法。注意液氦中第二声的色散关系是线性的，在给定温度下几乎没有色散。因此脉冲可以保持波包形状，并以整齐划一的速度到达接收器。</li></ol></li><li><p><code>P22</code> <strong>非对角长程序</strong></p><ol start='' ><li>我们回过头来看超流相变的对称性破缺过程。我们曾提到，在某些量子态上有宏观量级的粒子布居时，就形成凝聚体。现在我们解释这种变化与序的关系。</li><li>我们知道，在固体中，原子的排列是高度有序的。1962年，杨振宁提出，固体中的序是对角长程序，而在一些液体或气体中存在非对角长程序（ODLRO）。他进一步指出，超流和超导相变的序都属于非对角长程序。</li><li>定义单粒子、双粒子约化密度矩阵ρ1、ρ2。固体中的对角长程序体现为坐标表象中的ρ2的对角元在|r1-r2|→∞时不趋于零，而BEC中的非对角长程序体现为坐标表象中的ρ1的非对角元（r 和r‘）在|r’-r|→∞时不趋于零。注意，后面那个积分是分布函数的傅里叶变换，当分布函数是局域的且足够光滑的，其傅里叶变换也是局域的，因此在大距离处趋于零。事实上，可以计算证明，这一项是指数地趋于零的。</li><li>ODLRO可以理解为，在r处湮灭一个粒子，其进入凝聚体中，而r’处产生一个粒子，即从凝聚体中拿出一个粒子，这样的概率无论两点之间距离多大都是不为零的。</li><li>这样一来，我们就可以定义序参量ψ<em>0 (r)=⟨ψ ̂(r)⟩，这个平均是以相干态为基的，当它不等于零时，我们说U1对称性破缺了。对于BEC的情况，ψ</em>0 (r)=√(n_0 (r)) e^iθ. 这里相位角θ由相干态中固定的相位决定，因此这个相变又可以看成是相干态中某个态分量的占据具有宏观量级。</li><li>非理想玻色气体（比如液氦4）的情况稍有不同，它也体现非对角长程序，但是不会凝聚到单个量子态，Bogoliubov在40年代发展了一套基于相干态的方法，将玻色子的产生淹没算符线性叠加，得到在有相互作用的情况下的“准粒子”。说明这些量子液体在低温下按照这样的准粒子进行激发，这些准粒子的能谱就是我们前面提到的。理论计算给出零温附近类似声子的线性色散关系，实验验证了这一点。</li><li>Hohenberg证明了有限温度下严格的一维、二维Bose和Fermi液体不存在ODLRO，因此也不能发生连续对称性自发破缺。但是，低维也有超流体，不同于三维超流体，它具有准非对角长程序。也就是说，单粒子约化密度矩阵在距离趋于无穷远的时候按幂次趋于零而不是指数地趋于零。一个例子就是二维FQHE。</li></ol></li><li><p><code>P23</code> Contents</p></li><li><p><code>P24</code> <strong>He3超流</strong></p><ol start='' ><li>上世纪70年代初，BCS理论成功解释低温超导，氦4超流理论也比较明晰，低温物理的理论体系基本上看起来很完备了。直到1972年，Lee，Oscheroff和Richardson在Cornell发现了氦3的超流相变。Leggett后来较好地解释了这些现象，因此获得2003年诺奖。</li><li>首先意识到氦3是费米子，那么形成凝聚体的机理应该类似BCS超导。但是，液氦中没有像固体中那样的声子来作为等效吸引力的媒介，而氦3间的van der Waals作用又是由很强的排斥势主导，吸引力很弱。事实上，在氦3中形成的Cooper pairs是p波模式（l=1），不同于普通BCS的s波超导（l=0）.</li></ol></li><li><p><code>P25</code> <strong>He3超流</strong></p><ol start='' ><li>我们回忆BCS超导理论中Cooper pairs的机理。在低温下，以声子为媒介，费米面附近的电子之间有等效的吸引势。由于电子两两配对的能量比原来只是呆在费米面上的能量要低，因此费米面就不稳定，从而在费米面处打开一个带隙。电子以库伯对的（准粒子）形式激发到带隙之上，成为超导载流子。</li><li>在Helium3中，为了有Cooper instability，我们需要一个等效吸引势。下面我们来介绍这个起源。</li></ol></li><li><p><code>P26</code> <strong>He3超流</strong></p><ol start='' ><li>我们回忆BCS超导理论中Cooperpairs的机理。在低温下，以声子为媒介，费米面附近的电子之间有等效的吸引势。由于电子两两配对的能量比原来只是呆在费米面上的能量要低，因此费米面就不稳定，从而在费米面处打开一个带隙。电子以库伯对的（准粒子）形式激发到带隙之上，成为超导载流子。</li><li>在Helium3中，为了有Cooper instability，我们需要一个等效吸引势。下面我们来介绍这个起源。</li><li>考虑低能量激发态，波矢k在费米面附近，引入有效质量m<em>. 有效质量表征费米子之间的相互作用，在低压下，对于He3，m</em>~3m. 对应费米能的能标在1K量级。因此连续相变温度应该在millikelvin量级。激发态能量如上式，这里f是kσ态和k&#39;σ&#39;态之间的相互作用。</li></ol></li><li><p><code>P27</code> <strong>He3超流</strong></p><ol start='' ><li>我们回忆BCS超导理论中Cooperpairs的机理。在低温下，以声子为媒介，费米面附近的电子之间有等效的吸引势。由于电子两两配对的能量比原来只是呆在费米面上的能量要低，因此费米面就不稳定，从而在费米面处打开一个带隙。电子以库伯对的（准粒子）形式激发到带隙之上，成为超导载流子。</li><li>在Helium3中，为了有Cooper instability，我们需要一个等效吸引势。下面我们来介绍这个起源。</li><li>考虑低能量激发态，波矢k在费米面附近，引入有效质量m<em>. 有效质量表征费米子之间的相互作用，在低压下，对于He3，m</em>~3m. 对应费米能的能标在1K量级。因此连续相变温度应该在millikelvin量级。激发态能量如上式，这里f是kσ态和k‘σ’态之间的相互作用。</li><li>我们进一步把自旋的依赖明显地写出来。注意两个自旋的内积可能取-3/4（单态）或+1/4（三重态）。利用球面对称性，f_1和f_2可以按照球函数展开，实际上只有前两项展开系数显著。将有效质量和展开系数作为拟合参数，可以得到较好的拟合模型。实验给出f_2的领头项是负的，因此体现出铁磁性。</li><li>我们在K空间讨论相互作用势（注意，这就是散射矩阵元）。Leggett在1975年估算出费米面上邻近两点之间的相互作用势，正比于自旋内积。g是费米面上的态密度。我们看到在自选三重态下这是一个负数，表明这是吸引势。</li><li>由此，我们看到氦3超流和BCS超导之间最大的不同，就是前者的库伯对取自旋三态（对应轨道角动量l=1），是p-wave配对；而后者Cooperpairs取自旋单态（对应轨道角动量l=0），是s-wave配对。</li></ol></li><li><p><code>P28</code> <strong>He3超流</strong></p><ol start='' ><li>我们仿照BCS超导来写超流氦3的Hamiltonian，假定由自旋交换相互作用引起的吸引势是V(k,k’)，明显地与自旋有关。</li><li>用平均场方法来处理Hamiltonian，丢掉与Cooper配对不相关的项。</li><li>超流带隙矩阵是如上式所定义，注意在BCS超导中，由于确定了电子之间是自旋单态，且采用了delta势近似，所以Δ不依赖于自旋和波矢。</li><li>接下来就要对这个Hamiltonian对角化，手续和BCS中的Bogoliubov-Valatin变换一样（将氦3原子的产生湮灭算符线性组合），只不过考虑自旋，现在有4个能量本征值（两正两负）。这样，对角化后，系列算符就代表Cooperpairs的激发，相应地，费米面处打开一个能隙。</li><li>为了确定能隙，我们需要一个自洽方程。可以计算⟨c<em>(-k,β)c</em>(k,α)⟩，将其用b系列算符表达，由于Bogoliubov-Valatin系数包含Δ，代回能隙的定义式，我们就得到自洽方程。</li><li>满足对称性要求的带隙结构有很多种，前面提到的He3-A和He3-B就是最主要的两种。</li></ol></li><li><p><code>P29</code> <strong>BCS-BEC crossover</strong></p><p>中子星内部的超流</p><p>BCS-BECcrossover</p><p>发生配对之后并不马上超流，而是先经历一个正常玻色液体的阶段，然后依散射长度的不同，超流的机制也不同。</p><p>BCS中，凝聚体在空间连结比较松散，而BEC极限下，凝聚体在空间形成紧密结合的bosonic molecules</p><p>通过调节某些参量（比如磁场），利用Feshbach共振，体系可以过渡到费米子紧密相连的玻色极限，进而发生BEC。</p></li></ul><p>&nbsp;</p></div>
+</body>
+</html>
